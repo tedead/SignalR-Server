@@ -9,11 +9,11 @@ namespace SignalRServer.Hubs
             await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
 
-        private readonly IHubContext<ChatHub> _hub;
+        //private readonly IHubContext<ChatHub> _hub;
 
-        public Task SendNotificationAsync(string message)
-        {
-            return _hub.Clients.All.SendAsync("ReceiveMessage", message);
-        }
+        //public Task SendNotificationAsync(string message)
+        //{
+        //    return _hub.Clients.All.SendAsync("ReceiveMessage", message);
+        //}
     }
 }
